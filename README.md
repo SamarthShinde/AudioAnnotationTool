@@ -1,65 +1,68 @@
-# Audio Annotation Tool
+Certainly! Here’s an updated and polished version of your README.md file, incorporating the content you provided and enhancing it for clarity, formatting, and professionalism.
+
+Audio Annotation Tool
 
 An interactive GUI application for annotating audio files by segmenting them into smaller clips and assigning labels. This tool is designed to streamline the process of audio annotation, making it efficient and user-friendly.
 
-## **Table of Contents**
+Table of Contents
 
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-  - [macOS](#macos)
-  - [Windows](#windows)
-- [Usage](#usage)
-  - [Running the Application](#running-the-application)
-  - [Annotating Audio Files](#annotating-audio-files)
-  - [Keyboard Shortcuts](#keyboard-shortcuts)
-- [Project Structure](#project-structure)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
+	•	Features
+	•	Prerequisites
+	•	Installation
+	•	macOS
+	•	Windows
+	•	Usage
+	•	Running the Application
+	•	Annotating Audio Files
+	•	Keyboard Shortcuts
+	•	Project Structure
+	•	Dependencies
+	•	Contributing
+	•	License
+	•	Contact
+	•	Additional Notes
 
----
+Features
 
-## **Features**
+	•	Load and Display Audio Files: Load a folder containing audio files (WAV format). The application lists all audio files in the left panel.
+	•	Audio Segmentation: Automatically segments audio files into 5-second clips.
+	•	Playback Controls: Play, pause, and stop audio segments.
+	•	Annotation Classes: Assign one or multiple labels to each audio segment from predefined classes.
+	•	Classes:
+	•	1: Male
+	•	2: Female
+	•	3: Engine_rev
+	•	4: No_sound
+	•	5: Music
+	•	Keyboard Shortcuts:
+	•	Class Selection: Use number keys (1-5) to toggle class labels.
+	•	Navigation: Use arrow keys to navigate between segments.
+	•	Playback Control: Use the spacebar to play or pause audio.
+	•	Progress Tracking: Visual progress bar indicating annotation progress.
+	•	Data Persistence: Save annotations to a CSV file (annotations.csv), including additional metadata:
+	•	Audio Name
+	•	File Location
+	•	Segment Number
+	•	Segment Time
+	•	Class IDs
+	•	Class Names
 
-- **Load and Display Audio Files**: Load a folder containing audio files (WAV format). The application lists all audio files on the left panel.
-- **Audio Segmentation**: Automatically segments audio files into 5-second clips.
-- **Playback Controls**: Play, pause, and stop audio segments.
-- **Annotation Classes**: Assign one or multiple labels to each audio segment from predefined classes.
-- **Keyboard Shortcuts**:
-  - **Class Selection**: Use number keys (`1`-`5`) to toggle class labels.
-  - **Navigation**: Use arrow keys to navigate between segments.
-  - **Playback Control**: Use the spacebar to play or pause audio.
-- **Progress Tracking**: Visual progress bar indicating annotation progress.
-- **Data Persistence**: Save annotations to a CSV file (`annotations.csv`), including additional metadata:
-  - Audio Name
-  - File Location
-  - Segment Number
-  - Segment Time
-  - Class IDs
-  - Class Names
+Prerequisites
 
----
+	•	Python 3.10 or higher
+	•	pip (Python package installer)
+	•	FFmpeg (for audio processing with pydub)
+	•	Git (optional, for cloning the repository)
 
-## **Prerequisites**
+Installation
 
-- **Python 3.10 or higher**
-- **pip** (Python package installer)
-- **FFmpeg** (for audio processing with `pydub`)
-- **Git** (optional, for cloning the repository)
+macOS
 
----
+	1.	Install Python 3.10
+Ensure you have Python 3.10 installed. You can download it from the official website or install via Homebrew:
 
-## **Installation**
+brew install python@3.10
 
-### **macOS**
-
-1. **Install Python 3.10**
-
-   Ensure you have Python 3.10 installed. You can download it from the [official website](https://www.python.org/downloads/mac-osx/) or install via Homebrew:
-
-   ```bash
-   brew install python@3.10
 
 	2.	Install FFmpeg
 FFmpeg is required by pydub for audio processing.
@@ -237,5 +240,3 @@ Additional Notes
 	•	The application requires Python 3.10 or higher due to the use of recent language features.
 	•	Virtual Environment:
 	•	Using a virtual environment is recommended to manage dependencies and avoid conflicts with other Python projects.
-
-If you have any further questions or need additional assistance, feel free to ask!
