@@ -1,98 +1,100 @@
-Certainly! Here’s an updated and polished version of your README.md file, incorporating the content you provided and enhancing it for clarity, formatting, and professionalism.
+# Audio Annotation Tool
 
-Audio Annotation Tool
+An interactive GUI application designed for efficient and user-friendly annotation of audio files. This tool segments audio into smaller clips, assigns labels, and saves annotations in a structured format for further use.
 
-An interactive GUI application for annotating audio files by segmenting them into smaller clips and assigning labels. This tool is designed to streamline the process of audio annotation, making it efficient and user-friendly.
+## Table of Contents
 
-Table of Contents
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+  - [macOS](#macos)
+  - [Windows](#windows)
+- [Usage](#usage)
+  - [Running the Application](#running-the-application)
+  - [Annotating Audio Files](#annotating-audio-files)
+- [Keyboard Shortcuts](#keyboard-shortcuts)
+- [Project Structure](#project-structure)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Additional Notes](#additional-notes)
 
-	•	Features
-	•	Prerequisites
-	•	Installation
-	•	macOS
-	•	Windows
-	•	Usage
-	•	Running the Application
-	•	Annotating Audio Files
-	•	Keyboard Shortcuts
-	•	Project Structure
-	•	Dependencies
-	•	Contributing
-	•	License
-	•	Contact
-	•	Additional Notes
+## Features
 
-Features
+- **Load and Display Audio Files**: Load a folder containing audio files (WAV format). The application lists all audio files in the left panel.
+- **Audio Segmentation**: Automatically segments audio files into 5-second clips.
+- **Playback Controls**: Play, pause, and stop audio segments.
+- **Annotation Classes**: Assign one or multiple labels to each audio segment from predefined classes:
+  - 1: Male
+  - 2: Female
+  - 3: Engine_rev
+  - 4: No_sound
+  - 5: Music
+- **Keyboard Shortcuts**:
+  - Class Selection: Use number keys (1-5) to toggle class labels.
+  - Navigation: Use arrow keys to navigate between segments.
+  - Playback Control: Use the spacebar to play or pause audio.
+- **Progress Tracking**: Visual progress bar indicating annotation progress.
+- **Data Persistence**: Save annotations to a CSV file (`annotations.csv`), including additional metadata:
+  - Audio Name
+  - File Location
+  - Segment Number
+  - Segment Time
+  - Class IDs
+  - Class Names
 
-	•	Load and Display Audio Files: Load a folder containing audio files (WAV format). The application lists all audio files in the left panel.
-	•	Audio Segmentation: Automatically segments audio files into 5-second clips.
-	•	Playback Controls: Play, pause, and stop audio segments.
-	•	Annotation Classes: Assign one or multiple labels to each audio segment from predefined classes.
-	•	Classes:
-	•	1: Male
-	•	2: Female
-	•	3: Engine_rev
-	•	4: No_sound
-	•	5: Music
-	•	Keyboard Shortcuts:
-	•	Class Selection: Use number keys (1-5) to toggle class labels.
-	•	Navigation: Use arrow keys to navigate between segments.
-	•	Playback Control: Use the spacebar to play or pause audio.
-	•	Progress Tracking: Visual progress bar indicating annotation progress.
-	•	Data Persistence: Save annotations to a CSV file (annotations.csv), including additional metadata:
-	•	Audio Name
-	•	File Location
-	•	Segment Number
-	•	Segment Time
-	•	Class IDs
-	•	Class Names
+## Prerequisites
 
-Prerequisites
+- Python 3.10 or higher
+- pip (Python package installer)
+- FFmpeg (for audio processing with pydub)
+- Git (optional, for cloning the repository)
 
-	•	Python 3.10 or higher
-	•	pip (Python package installer)
-	•	FFmpeg (for audio processing with pydub)
-	•	Git (optional, for cloning the repository)
+## Installation
 
-Installation
+### macOS
 
-macOS
+1. **Install Python 3.10**  
+   Ensure you have Python 3.10 installed. You can download it from the official website or install it via Homebrew:
 
-	1.	Install Python 3.10
-Ensure you have Python 3.10 installed. You can download it from the official website or install via Homebrew:
+```bash
+   brew install python@3.10
+```
 
-brew install python@3.10
+2.	Install FFmpeg
+FFmpeg is required by pydub for audio processing:
 
-
-	2.	Install FFmpeg
-FFmpeg is required by pydub for audio processing.
-
+```bash
 brew install ffmpeg
+```
 
+3.	Clone the Repository
 
-	3.	Clone the Repository
-
+```bash
 git clone https://github.com/SamarthShinde/AudioAnnotationTool.git
 cd AudioAnnotationTool
+```
 
+4.	Create a Virtual Environment (Optional but Recommended)
 
-	4.	Create a Virtual Environment (Optional but Recommended)
-
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
+5.	Install Python Dependencies
 
-	5.	Install Python Dependencies
-
+```bash
 pip install -r requirements.txt
-
+```
 
 
 Windows
 
-	1.	Install Python 3.10
-Download and install Python 3.10 from the official website. Ensure you check the option to add Python to your PATH during installation.
-	2.	Install FFmpeg
+1.	Install Python 3.10
+	Download and install Python 3.10 from the official website. Ensure you check the option to add Python to your PATH during installation.
+2.	Install FFmpeg
 	•	Download FFmpeg from FFmpeg’s official website.
 	•	Choose a build from gyan.dev.
 	•	Extract the downloaded ZIP file.
@@ -102,23 +104,28 @@ Download and install Python 3.10 from the official website. Ensure you check the
 	•	Under System variables, find and select Path, then click Edit.
 	•	Click New and add the path to the bin directory of FFmpeg.
 	•	Click OK to close all dialog boxes.
-	3.	Clone the Repository
-Open Command Prompt and run:
+	
+3.	Clone the Repository
 
+```bash
 git clone https://github.com/SamarthShinde/AudioAnnotationTool.git
 cd AudioAnnotationTool
+```
 
 
-	4.	Create a Virtual Environment (Optional but Recommended)
+4.	Create a Virtual Environment (Optional but Recommended)
 
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
 
-	5.	Install Python Dependencies
+5.	Install Python Dependencies
 
+```bash
 pip install -r requirements.txt
-
+```
 
 
 Usage
@@ -127,24 +134,29 @@ Running the Application
 
 	1.	Navigate to the Project Directory
 
+```bash
 cd AudioAnnotationTool
-
+```
 
 	2.	Activate Virtual Environment (If Created)
 	•	macOS:
 
+```bash
 source venv/bin/activate
-
+```
 
 	•	Windows:
 
+```bash
 venv\Scripts\activate
+```
 
 
 	3.	Run the Application
 
+```bash
 python main.py
-
+```
 
 
 Annotating Audio Files
@@ -229,14 +241,15 @@ This project is licensed under the MIT License.
 
 Contact
 
-For any questions or issues, please open an issue on the GitHub repository or contact me at Samarth.shinde505@gmail.com.
+For any questions or assistance, feel free to contact me at [samarth.shinde505@gmail.com](mailto:samarth.shinde505@gmail.com)..
 
 Additional Notes
 
 	•	FFmpeg Dependency:
-	•	FFmpeg is required by pydub for audio processing.
-	•	Installation differs between macOS and Windows, as detailed in the installation section.
+FFmpeg is required by pydub for audio processing. Installation differs between macOS and Windows, as detailed in the installation section.
 	•	Python Version:
-	•	The application requires Python 3.10 or higher due to the use of recent language features.
+The application requires Python 3.10 or higher due to the use of recent language features.
 	•	Virtual Environment:
-	•	Using a virtual environment is recommended to manage dependencies and avoid conflicts with other Python projects.
+Using a virtual environment is recommended to manage dependencies and avoid conflicts with other Python projects.
+
+This markdown is formatted correctly for GitHub, so when you paste it into your `README.md` file, it will display well on your GitHub repository page.
