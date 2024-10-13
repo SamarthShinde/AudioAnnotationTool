@@ -69,7 +69,7 @@ brew install ffmpeg
 
 	3.	Clone the Repository
 
-git clone https://github.com/yourusername/AudioAnnotationTool.git
+git clone https://github.com/SamarthShinde/AudioAnnotationTool.git
 cd AudioAnnotationTool
 
 
@@ -102,7 +102,7 @@ Download and install Python 3.10 from the official website. Ensure you check the
 	3.	Clone the Repository
 Open Command Prompt and run:
 
-git clone https://github.com/yourusername/AudioAnnotationTool.git
+git clone https://github.com/SamarthShinde/AudioAnnotationTool.git
 cd AudioAnnotationTool
 
 
@@ -226,17 +226,7 @@ This project is licensed under the MIT License.
 
 Contact
 
-For any questions or issues, please open an issue on the GitHub repository or contact me at your-email@example.com.
-
----
-
-## **requirements.txt**
-
-```plaintext
-PyQt5>=5.15.0
-pydub>=0.25.1
-pandas>=1.3.0
-numpy>=1.21.0
+For any questions or issues, please open an issue on the GitHub repository or contact me at Samarth.shinde505@gmail.com.
 
 Additional Notes
 
